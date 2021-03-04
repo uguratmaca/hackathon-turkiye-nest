@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        {{#each data.results}}
+        <div class="col-6 p-3">
+            <div class="row">
+                <div class="col-6">
+                    <a href="/etkinlik/{{slug}}"><img src="{{thumbnail}}" class="img-fluid" alt="{{name}}" /></a>
+                </div>
+                <div class="col-6">
+                    <h2 class="h4"><a href="/etkinlik/{{slug}}">{{name}}</a></h2>
+                    {{!-- <h3 class="h5">{{etype.name}}</h3> --}}
+                    <p>{{location}}</p>
+                    <p>Son başvuru tarihi: {{deadline}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{!-- : string;
+starts_at: Date;
+deadline: Date;
+ends_at: Date;
+location: string;
+tags: Array<Tag>;
+    description: string;
+    thumbnail: string;
+    : EventType;
+
+    https://api.hackathonturkiye.com/events/appcent-designathon/ --}}
